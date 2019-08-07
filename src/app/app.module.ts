@@ -7,6 +7,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ChatComponent } from './chat/chat.component';
+import { SalonComponent } from './salon/salon.component';
+import { CateringComponent } from './catering/catering.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ChatComponent } from './chat/chat.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    ChatComponent
+    ChatComponent,
+    SalonComponent,
+    CateringComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

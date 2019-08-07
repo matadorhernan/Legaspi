@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,9 +12,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public navSelector:HTMLElement;
+  public pageName:string;
+
+  public homeMenu:HTMLElement;
+  public bookingMenu:HTMLElement;
+  public cateringMenu:HTMLElement;
+  public galleryMenu:HTMLElement;
+  
+  constructor(private router:Router) {  
+    router.events.subscribe((url: any) => {
+      let parts = router.url.split('/');
+      this.pageName = parts[1];
+    });
+  }
+
+  navSelected(inputRoute:string){
+    this.router.navigate([`${inputRoute}`]);
+  }
 
   ngOnInit() {
+    this.navSelector = document.getElementById('nav-selector');
+    this.homeMenu = document.getElementById('home');
+    this.bookingMenu = document.getElementById('booking');
+    this.cateringMenu = document.getElementById('catering');
+    this.galleryMenu = document.getElementById('gallery');
+
+    
+    
   }
 
 }

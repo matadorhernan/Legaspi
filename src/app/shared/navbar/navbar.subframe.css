@@ -1,11 +1,38 @@
 .menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    color: #ffffffd2;    
+  position: relative;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-    padding: 0 10px;
+  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li a {
+  color: #ffffffd2;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu li:hover a {
+  color: #ffffff;
+}
+
+#nav-selector {
+  position: absolute;
+  background: #DC3545;
+  border-radius: 20px;
+
+  height: 10px;
+  width: 58px;
+  bottom: -5px;
+  transition: 0.3s;
+  left: 0px;
 }
