@@ -1,0 +1,26 @@
+footer .footer-brand {
+    display: block;
+    background: url('/assets/brand/LogoKnife.svg');
+    width: 200px;
+    height: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+}
+
+footer .footer-title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+footer .footer-text {
+    color: #ffffff80;
+    font-size: 15px;
+}
+footer .footer-note {
+    color: #ffffff80;
+    font-size: 12px;
+}

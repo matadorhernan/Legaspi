@@ -1,0 +1,16 @@
+nav {
+    background: #131313;
+}
+
+.main-frame {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-frame {
+    height: 50px;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

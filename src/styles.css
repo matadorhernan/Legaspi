@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css?family=Adamina&display=swap');
+*:not(div){
+    font-family: 'Adamina', serif;
+} */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Extended B4 -bg */
+.bg-carbon {
+background: #131313;
+}
+.bg-carbon-lighter {
+background: #202020;
+}
+.bg-black {
+background: #000000;
+}
+
+.rounded-modern {
+    border-radius: 50px;
+}
+
+.group-rounded-modern input{
+    border-radius: 50px 0 0 50px;
+}
+
+.group-rounded-modern div button {
+    border-radius: 0 50px 50px 0;
+}

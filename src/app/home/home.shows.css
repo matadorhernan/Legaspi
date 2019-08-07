@@ -1,0 +1,53 @@
+.shows {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shows .jumbotron{
+    min-height: 300px;
+    border-radius: 0;
+}
+
+.shows .jagged-bottom{
+
+    width: 100%; height: 10px;
+    bottom: 0; /* -height */
+  
+    /* TODO Add browser prefixes */
+    background:
+      linear-gradient(
+        45deg, transparent 33.333%,
+        #E9ECEF 33.333%, #E9ECEF 66.667%,
+        transparent 66.667%
+      ),linear-gradient(
+        -45deg, transparent 33.333%,
+        #E9ECEF 33.333%, #E9ECEF 66.667%,
+        transparent 66.667%
+      );
+  
+      background-size: 8px 20px; /* toothSize doubleHeight */
+      background-position: 0 -10px; /* horizontalOffset -height */
+}
+
+.shows .jagged-top{
+
+    width: 100%; height: 10px;
+    bottom: 0; /* -height */
+  
+    /* TODO Add browser prefixes */
+    background:
+      linear-gradient(
+        45deg, #E9ECEF 33.333%,
+        transparent 33.333%, transparent 66.667%,
+        #E9ECEF 66.667%
+      ),linear-gradient(
+        -45deg, #E9ECEF 33.333%,
+        transparent 33.333%, transparent 66.667%,
+        #E9ECEF 66.667%
+      );
+  
+      background-size: 8px 20px; /* toothSize doubleHeight */
+      background-position: 0 -10px; /* horizontalOffset -height */
+}

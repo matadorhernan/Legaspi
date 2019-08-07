@@ -1,0 +1,43 @@
+.main {
+    padding-top: 130px;
+    padding-bottom: 100px;
+}
+
+#img-plate {
+    transition: 2s;
+    position: absolute;
+    background: url(/assets/main/plate.png);
+    width: 500px; height: 500px;
+    margin-left: 30px;
+    background-size: contain;
+}
+
+#img-tomato {
+    transition: 2s;
+    position: absolute;
+    background: url(/assets/main/tomatoe2.png);
+    width: 100px; height: 100px;
+    margin-left:350px;
+    margin-top:430px;
+    background-size: contain;
+}
+
+#img-pepper {
+    transition: 2s;
+    position: absolute;
+    background: url(/assets/main/pepper.png);
+    width: 150px; height: 150px;
+    margin-left: 420px;
+    margin-top: 390px;
+    background-size: contain;
+}
+
+#img-tomato-2 {
+    transition: 2s;
+    position: absolute;
+    background: url(/assets/main/tomatoe.png);
+    width: 100px; height: 100px;
+    margin-left: 550px;
+    margin-top: 430px;
+    background-size: contain;
+}
