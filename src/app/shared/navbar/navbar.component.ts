@@ -12,8 +12,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  public navSelector:HTMLElement;
   public pageName:string;
+  
+  public navSelector:HTMLElement;
 
   public homeMenu:HTMLElement;
   public bookingMenu:HTMLElement;
@@ -21,14 +22,31 @@ export class NavbarComponent implements OnInit {
   public galleryMenu:HTMLElement;
   
   constructor(private router:Router) {  
+    
     router.events.subscribe((url: any) => {
-      let parts = router.url.split('/');
-      this.pageName = parts[1];
+
+      if(router.url.split('/')[1] != this.pageName){
+
+        this.pageName = router.url.split('/')[1]
+
+        switch(this.pageName){
+
+          case 'booking': this.navSelected(this.bookingMenu.offsetLeft, this.bookingMenu.offsetWidth)
+          break;
+          case 'catering': this.navSelected(this.cateringMenu.offsetLeft, this.cateringMenu.offsetWidth)
+          break;
+          case 'gallery': this.navSelected(this.galleryMenu.offsetLeft, this.galleryMenu.offsetWidth)
+          break;
+          default: this.navSelected(this.homeMenu.offsetLeft, this.homeMenu.offsetWidth) 
+          break;
+        }
+      }
     });
   }
 
-  navSelected(inputRoute:string){
-    this.router.navigate([`${inputRoute}`]);
+  navSelected(left:number, width:number){
+    this.navSelector.style.width = `${width}px`;
+    this.navSelector.style.left = `${left}px`;
   }
 
   ngOnInit() {
@@ -37,9 +55,6 @@ export class NavbarComponent implements OnInit {
     this.bookingMenu = document.getElementById('booking');
     this.cateringMenu = document.getElementById('catering');
     this.galleryMenu = document.getElementById('gallery');
-
-    
-    
   }
 
 }

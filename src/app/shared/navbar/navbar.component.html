@@ -24,10 +24,10 @@
   <div class="sub-frame">
     <ul class="menu">
       <div id="nav-selector"></div>
-      <li id="home"><a (click)="navSelected('/')">Inicio</a></li>
-      <li id="booking"><a (click)="navSelected('/booking')">Salones</a></li>
-      <li id="catering"><a (click)="navSelected('/catering')">Banqueteria</a></li>
-      <li id="gallery"><a (click)="navSelected('/gallery')">Galeria</a></li>
+      <li id="home"><a [routerLink]="['/']">Inicio</a></li>
+      <li id="booking"><a [routerLink]="['/booking']">Salones</a></li>
+      <li id="catering"><a [routerLink]="['/catering']">Banqueteria</a></li>
+      <li id="gallery"><a [routerLink]="['/gallery']">Galeria</a></li>
     </ul>
   </div>
 </nav>
