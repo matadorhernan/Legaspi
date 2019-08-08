@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalonComponent implements OnInit {
 
+  public halls = [1,2,3,4,5,6]
   constructor() { }
 
   ngOnInit() {

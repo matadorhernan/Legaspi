@@ -1,0 +1,32 @@
+section {
+    min-height: 100vh;
+    background: #000;
+}
+.card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.card-salon {
+    position: relative;
+    width: 25%; height: 400px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0;
+}
+
+.card-salon img {
+    position: absolute;
+    width: calc(100% - 20px); height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-salon h6 {
+    color: #ffffff;
+    margin-top: 260px;
+}
+
+
+
+

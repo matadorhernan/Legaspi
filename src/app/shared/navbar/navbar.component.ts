@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
   
   constructor(private router:Router) {  
     
-    router.events.subscribe((url: any) => {
+    router.events.subscribe((url:any) => {
 
       if(router.url.split('/')[1] != this.pageName){
 

@@ -6,7 +6,9 @@
 html {
     scroll-behavior: smooth;
 }
-
+p {
+ color: #ffffff85;
+}
 /* Extended B4 -bg */
 .bg-carbon {
 background: #131313;

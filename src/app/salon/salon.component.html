@@ -1,3 +1,18 @@
-<p>
-  salon works!
-</p>
+<section>
+  <div class="container py-5">
+    <h2 class="mb-3 text-white">
+      Nuestros Salones en Aguascalientes
+    </h2>
+    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus soluta ipsum
+      laudantium aspernatur, obcaecati excepturi sed nesciunt suscipit doloribus accusamus aliquam, explicabo numquam
+      vero voluptates at eius tempora. Itaque, quaerat!</p>
+    <div class="card-stack">
+        <div class="card-salon" *ngFor="let hall of halls">
+            <img src="/assets/placeholders/hall001.jpg" alt="">
+            <h6>SALON COMPLETO . AGS</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laudantium sunt molestiae modi temporibus
+              voluptatum assumenda</p>
+          </div>
+    </div>
+  </div>
+</section>
