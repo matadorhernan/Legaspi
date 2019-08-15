@@ -1,0 +1,35 @@
+
+.container.main-container {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+
+#img-plate {
+    transition: 2s;
+
+    position: absolute;
+    
+    left: -30%;
+    top: -100%;
+
+    background: url(/assets/main/plate.png);
+    width: 600px; height: 600px;
+    background-size: contain;
+}
+
+#img-flour {
+    transition: 2s;
+
+    position: absolute;
+    
+    left: -60%;
+    top: -100%;
+
+    background: url(/assets/main/flour.png);
+    width: 800px; height: 800px;
+    background-size: contain;
+}

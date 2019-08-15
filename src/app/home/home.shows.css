@@ -8,6 +8,22 @@
 .shows .jumbotron{
     min-height: 300px;
     border-radius: 0;
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.item-salon {
+  height: 300px;
+  width: 23%;
+}
+
+.shows img {
+  height: 75%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .shows .jagged-bottom{

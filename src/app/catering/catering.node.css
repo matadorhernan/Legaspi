@@ -1,0 +1,24 @@
+
+.container.node-container {
+    padding:100px  0 ;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .node-title {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .node-subtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .node-subtitle p {
+    width: 70%;
+ }

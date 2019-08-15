@@ -15,7 +15,9 @@
           paqute</button>
       </div>
       <div class="col-md-6">
-        <div id="img-plate"></div>
+        <div id="img-flour"></div>
+        <div id="img-pan"></div>
+        <div id="img-romero"></div>
         <div id="img-tomato"></div>
         <div id="img-tomato-2"></div>
         <div id="img-pepper"></div>
@@ -29,6 +31,12 @@
     <p class="text-white-50 text-center mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum temporibus maiores ab sequi quod nam libero odio vel corrupti qui dolor ut aliquid beatae explicabo culpa architecto non eum rerum, dolores autem vero saepe eaque! Earum debitis ex molestiae harum rerum, quaerat dignissimos delectus magnam sed id eveniet tempora.</p>
     <div class="jagged-top"></div>
     <div class="jumbotron mb-0">
+       <div class="item-salon" *ngFor="let hall of halls">
+          <img src="/assets/placeholders/hall001.jpg" alt="">
+          <p class="text-dark mt-3">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          </p>
+       </div>
     </div>
     <div class="jagged-bottom"></div>
     <button type="button" class="btn-home btn btn-outline-danger btn-lg w-50 rounded-modern"> Ver Todos Los Salones </button>
