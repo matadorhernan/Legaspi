@@ -1,24 +1,61 @@
+.node-two {
+  background: #fff;
+  width: 50%;
+  height: 70px;
+}
+
+.node-three {
+  background: #fff;
+  width: 75%;
+  height: 70px;
+}
+
+.node-icon {
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    margin: 30px; 
+}
+
+.node-subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .container.node-container {
-    padding:100px  0 ;
-    display: flex;
-     justify-content: center;
-     align-items: center;
- }
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- .node-title {
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+.node-container h3,
+.node-container  h2 {
+    padding:  10px 30px;
+    margin: 10px 0;
+    background: #131313;
+    font-size:  20px;
+    border-radius: 30px;
 
- .node-subtitle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
+    cursor: pointer;
+}
 
- .node-subtitle p {
-    width: 70%;
- }
+.node-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-subtitle p {
+  width: 70%;
+}
+
+.sub-node h3 {
+    word-wrap: normal;
+    text-align: center;
+}
+
+

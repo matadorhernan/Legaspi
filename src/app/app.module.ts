@@ -10,6 +10,7 @@ import { ChatComponent } from './chat/chat.component';
 import { SalonComponent } from './salon/salon.component';
 import { CateringComponent } from './catering/catering.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ComboComponent } from './combo/combo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     ChatComponent,
     SalonComponent,
     CateringComponent,
-    GalleryComponent
+    GalleryComponent,
+    ComboComponent
   ],
   imports: [
     BrowserModule,
