@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComboService } from './services/combo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'legaspi';
+  isShowingCombo:boolean = false;
+
+  constructor(private comboService:ComboService){
+    comboService.isShowingCombo.subscribe(status =>{
+      this.isShowingCombo = status;
+    })
+  }
+
 }

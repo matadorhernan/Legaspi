@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SalonComponent implements OnInit {
 
   public halls = [1,2,3,4,5,6]
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
+    
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1);
   }
 
 }

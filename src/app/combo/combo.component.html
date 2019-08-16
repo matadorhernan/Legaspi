@@ -1,3 +1,21 @@
-<p>
-  combo works!
-</p>
+<div class="combo-box">
+    <a class="combo-close" (click)="toggleCombo()">+</a>
+    <div class="slider">
+        
+    </div>
+    <div class="controls">
+        <button class="btn btn-outline-danger rounded-modern" role="button" (click)="prevSlide()" [disabled]="currentSlide <= 1">
+            Regresar
+        </button>
+        <button class="btn btn-danger rounded-modern" role="button" (click)="nextSlide()" *ngIf="currentSlide < slides.length">
+            Siguiente
+        </button>
+        <button class="btn btn-danger rounded-modern" role="button" (click)="toggleCombo()" *ngIf="currentSlide >= slides.length">
+            Cerrar
+        </button>
+    </div>
+    <div class="steps-wrapper">
+        <a class="step-marker" *ngFor="let slide of slides" (click)="slideTo(slide)"
+            [ngClass]="{active: slide == currentSlide, completed: slide < currentSlide}"></a>
+    </div>
+</div>

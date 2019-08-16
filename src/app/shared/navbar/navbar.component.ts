@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ComboService } from '../../services/combo.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   public pageName: string;
-
+  public isShowingCombo: boolean = false;
   public navSelector: HTMLElement;
 
   public homeMenu: HTMLElement;
@@ -20,7 +21,11 @@ export class NavbarComponent implements OnInit {
   public cateringMenu: HTMLElement;
   public galleryMenu: HTMLElement;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private comboService: ComboService) {
+    comboService.isShowingCombo.subscribe(status => {
+      this.isShowingCombo = status;
+    });
+
     router.events.subscribe((url: any) => {
       if (router.url.split('/')[1] != this.pageName) {
         this.pageName = router.url.split('/')[1];
@@ -54,10 +59,19 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
-
+  navigate(route: string) {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1);
+    this.router.navigate([route]);
+  }
   navSelected(left: number, width: number) {
     this.navSelector.style.width = `${width}px`;
     this.navSelector.style.left = `${left}px`;
+  }
+
+  toggleCombo() {
+    this.comboService.isShowingCombo.next(!this.isShowingCombo);
   }
 
   ngOnInit() {
@@ -67,5 +81,4 @@ export class NavbarComponent implements OnInit {
     this.cateringMenu = document.getElementById('catering');
     this.galleryMenu = document.getElementById('gallery');
   }
-
 }

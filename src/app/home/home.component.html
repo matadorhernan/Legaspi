@@ -11,7 +11,7 @@
           quaerat aliquid qui, ut, architecto impedit earum officiis reprehenderit, magnam et ratione corporis
           molestiae. Incidunt aliquam veniam repellat perferendis accusamus ratione?
         </p>
-        <button type="button" class="btn-home btn btn-outline-danger btn-lg btn-block rounded-modern">Armar un
+        <button type="button" class="btn-home btn btn-outline-danger btn-lg btn-block rounded-modern"  (click)="toggleCombo()">Armar un
           paqute</button>
       </div>
       <div class="col-md-6">
@@ -39,6 +39,6 @@
        </div>
     </div>
     <div class="jagged-bottom"></div>
-    <button type="button" class="btn-home btn btn-outline-danger btn-lg w-50 rounded-modern"> Ver Todos Los Salones </button>
+    <button type="button" class="btn-home btn btn-outline-danger btn-lg w-50 rounded-modern" [routerLink]="['/booking']"> Ver Todos Los Salones </button>
   </div>
 </section>

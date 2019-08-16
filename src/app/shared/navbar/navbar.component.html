@@ -16,18 +16,17 @@
         <button class="btn-send btn btn-outline-danger rounded-modern" href="#" role="button">Iniciar</button>
       </li>
       <li>
-        <button class="btn-send btn btn-outline-danger rounded-modern" href="#" role="button">Aun no eres
-          cliente?</button>
+        <button class="btn-send btn btn-outline-danger rounded-modern" (click)="toggleCombo()" role="button">Armar un paquete</button>
       </li>
     </ul>
   </div>
   <div class="sub-frame">
     <ul class="menu">
       <div id="nav-selector"></div>
-      <li id="home"><a [routerLink]="['/']">Inicio</a></li>
-      <li id="catering"><a [routerLink]="['/catering']">Banqueteria</a></li>
-      <li id="booking"><a [routerLink]="['/booking']">Salones</a></li>
-      <li id="gallery"><a [routerLink]="['/gallery']">Galeria</a></li>
+      <li id="home"><a (click)="navigate('/')">Inicio</a></li>
+      <li id="catering"><a (click)="navigate('/catering')">Banqueteria</a></li>
+      <li id="booking"><a (click)="navigate('/booking')">Salones</a></li>
+      <li id="gallery"><a (click)="navigate('/gallery')">Galeria</a></li>
     </ul>
   </div>
 </nav>
