@@ -8,6 +8,7 @@ import { ComboService } from '../../services/combo.service';
   styleUrls: ['./contact-slide.component.css']
 })
 export class ContactSlideComponent implements OnInit {
+  private key = 'legaspi_con';
   public formContact: FormGroup;
 
   constructor(private comboService: ComboService) {
@@ -27,20 +28,20 @@ export class ContactSlideComponent implements OnInit {
       ])
     });
 
-    let savedContact = this.comboService.getLocal()
+    let savedContact = this.comboService.getSession(this.key)
 
     if (savedContact){
       this.formContact.patchValue(savedContact)
       if(this.formContact.valid){
         this.comboService.isCurrentValid.next(true);
-        this.comboService.setLocal(this.formContact.value)
+        this.comboService.setSession(this.key, this.formContact.value)
       }
     }
 
     this.formContact.valueChanges.subscribe(data => {
       if (this.formContact.valid) {
         this.comboService.isCurrentValid.next(true);
-        this.comboService.setLocal(this.formContact.value)
+        this.comboService.setSession(this.key, this.formContact.value)
       } else {
         this.comboService.isCurrentValid.next(false);
       }

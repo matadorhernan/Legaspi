@@ -1,3 +1,20 @@
-<p>
-  kind-slide works!
-</p>
+<form>
+  <h2 class="display-5">Descripcion del Evento</h2>
+  <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia qui, consequuntur voluptatum
+    ipsa accusamus officiis, dolores doloremque ea facere ipsam magni quibusdam iure omnis! Harum laborum amet deleniti
+    qui?</p>
+  <div class="row">
+    <div class="col-12">
+      <ul class="wrapper">
+        <li (click)="selectOperations('family')">
+          <a class="legaspi-family" [ngClass]="{'selected': currentSelected == 'family'}"></a>
+          <label>Familiar</label>
+        </li>
+        <li (click)="selectOperations('company')">
+          <a class="legaspi-company" [ngClass]="{'selected': currentSelected == 'company'}"></a>
+          <label>Empresarial</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</form>

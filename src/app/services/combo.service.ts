@@ -11,12 +11,12 @@ export class ComboService {
 
   constructor() { }
 
-  public getLocal(){
-    return JSON.parse(sessionStorage.getItem('legaspi'))
+  public getSession(key:string){
+    return JSON.parse(sessionStorage.getItem(key))
   }
 
-  public setLocal(payload){
-    return sessionStorage.setItem('legaspi', JSON.stringify(payload))
+  public setSession(key:string, payload){
+    return sessionStorage.setItem(key , JSON.stringify(payload))
   }
   
 }
