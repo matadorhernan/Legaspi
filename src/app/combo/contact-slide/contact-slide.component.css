@@ -1,0 +1,38 @@
+form {
+    height: 100%;
+    padding: 30px;
+}
+
+.row{
+    
+    height: 100%;
+}
+
+.row .col-12 {
+    padding: 100px;
+    height: 100%;
+}
+
+.col-12 .form-group{
+    margin-top: 20px;
+    padding: 5px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #DC3545;
+
+}
+ .form-group input {
+    background:transparent;
+    border: none;
+    display: flex;
+    align-content: center;
+    color: white;
+}
+ .form-group label {
+     
+    color: #ffffff85;
+    margin: 0;
+}

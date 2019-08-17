@@ -7,13 +7,16 @@ import { BehaviorSubject } from 'rxjs';
 export class ComboService {
 
   public isShowingCombo:BehaviorSubject<boolean> = new BehaviorSubject(false);
-
-  public isFormContactValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isFormKindValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isFormSizeValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isFormBookingValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isFormStaffValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isFormResultValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public isCurrentValid:BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor() { }
+
+  public getLocal(){
+    return JSON.parse(sessionStorage.getItem('legaspi'))
+  }
+
+  public setLocal(payload){
+    return sessionStorage.setItem('legaspi', JSON.stringify(payload))
+  }
+  
 }

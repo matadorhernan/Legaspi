@@ -1,3 +1,18 @@
-<p>
-  contact-slide works!
-</p>
+<form [formGroup]="formContact">
+  <h2 class="display-4">Bienvenido</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia qui, consequuntur voluptatum ipsa accusamus officiis, dolores doloremque ea facere ipsam magni quibusdam iure omnis! Harum laborum amet deleniti qui?</p>
+  <div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label >nombre:</label>
+            <input type="text"
+              class="form-control" placeholder="escribe tu nombre" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label >email:</label>
+            <input type="text"
+              class="form-control" placeholder="escribe tu email" formControlName="email">
+          </div>
+    </div>
+  </div>
+</form>
