@@ -46,6 +46,10 @@ form {
 
 a.selected {
     border: 1px solid #DC3545 !important;
+    background: #dc35460c;
+}
+a.selected::after{
+    filter: invert(1) opacity(1);
 }
 
 a::after {

@@ -1,3 +1,28 @@
-<p>
-  staff-slide works!
-</p>
+<form>
+    <h2 class="display-5">Personal en Evento</h2>
+    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia qui, consequuntur voluptatum
+      ipsa accusamus officiis, dolores doloremque ea facere ipsam magni quibusdam iure omnis! Harum laborum amet deleniti
+      qui?</p>
+      <div class="row">
+          <div class="col-12">
+            <ul class="wrapper">
+              <li (click)="selectOperations('waiter')">
+                <a class="legaspi-family" [ngClass]="{'selected': waiter == true}"></a>
+                <label>Mecería </label>
+              </li>
+              <li (click)="selectOperations('cook')">
+                <a class="legaspi-family" [ngClass]="{'selected': cook == true}"></a>
+                <label>Banquetería</label>
+              </li>
+              <li (click)="selectOperations('security')">
+                  <a class="legaspi-family" [ngClass]="{'selected': security == true}"></a>
+                <label>Seguridad</label>
+              </li>
+              <li (click)="selectOperations('mariachi')">
+                  <a class="legaspi-family" [ngClass]="{'selected': mariachi == true}"></a>
+                <label>Mariachi</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+</form>

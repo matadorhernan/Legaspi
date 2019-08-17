@@ -1,3 +1,32 @@
-<p>
-  eventsize-slide works!
-</p>
+<form>
+    <h2 class="display-5">Tamaño del Evento</h2>
+    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia qui, consequuntur voluptatum
+      ipsa accusamus officiis, dolores doloremque ea facere ipsam magni quibusdam iure omnis! Harum laborum amet deleniti
+      qui?</p>
+      <div class="row">
+          <div class="col-12">
+            <ul class="wrapper">
+              <li (click)="selectOperations('-150')">
+                <a class="legaspi-family" [ngClass]="{'selected': currentSelected == '-150'}"></a>
+                <label>menor a 150</label>
+              </li>
+              <li (click)="selectOperations('150-300')">
+                <a class="legaspi-company" [ngClass]="{'selected': currentSelected == '150-300'}"></a>
+                <label>150 a 300</label>
+              </li>
+              <li (click)="selectOperations('300-450')">
+                <a class="legaspi-company" [ngClass]="{'selected': currentSelected == '300-450'}"></a>
+                <label>300 a 450</label>
+              </li>
+              <li (click)="selectOperations('450-600')">
+                <a class="legaspi-company" [ngClass]="{'selected': currentSelected == '450-600'}"></a>
+                <label>450 a 600</label>
+              </li>
+              <li (click)="selectOperations('+600')">
+                <a class="legaspi-company" [ngClass]="{'selected': currentSelected == '+600'}"></a>
+                <label>mayor a 600</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+</form>
