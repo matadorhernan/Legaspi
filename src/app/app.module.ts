@@ -18,6 +18,7 @@ import { KindSlideComponent } from './combo/kind-slide/kind-slide.component';
 import { BookingSlideComponent } from './combo/booking-slide/booking-slide.component';
 import { StaffSlideComponent } from './combo/staff-slide/staff-slide.component';
 import { ResultSlideComponent } from './combo/result-slide/result-slide.component';
+import { UtilitySlideComponent } from './combo/utility-slide/utility-slide.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ResultSlideComponent } from './combo/result-slide/result-slide.componen
     BookingSlideComponent,
     StaffSlideComponent,
     ResultSlideComponent,
+    UtilitySlideComponent,
   ],
   imports: [
     ReactiveFormsModule,

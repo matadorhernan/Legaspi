@@ -38,15 +38,6 @@ export class ComboComponent implements OnInit {
 
   ngOnInit() {}
 
-  public slideTo(slide) {
-    if (slide > this.lastValid) {
-      this.isCurrentValid = false;
-      this.currentSlide = this.lastValid + 1;
-    } else {
-      this.currentSlide = slide;
-    }
-  }
-
   public nextSlide() {
 
     if (this.currentSlide >= this.lastValid) {

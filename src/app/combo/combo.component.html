@@ -5,7 +5,7 @@
         <app-kind-slide *ngIf="currentSlide == 2"></app-kind-slide>
         <app-eventsize-slide *ngIf="currentSlide == 3"></app-eventsize-slide>
         <app-staff-slide *ngIf="currentSlide == 4"></app-staff-slide>
-        <app-booking-slide *ngIf="currentSlide == 5"></app-booking-slide>
+        <app-utility-slide *ngIf="currentSlide == 5"></app-utility-slide>
         <app-result-slide *ngIf="currentSlide == 6"></app-result-slide>
     </div>
     <div class="controls">
@@ -20,7 +20,7 @@
         </button>
     </div>
     <div class="steps-wrapper">
-        <a class="step-marker" *ngFor="let slide of slides" (click)="slideTo(slide)"
+        <a class="step-marker" *ngFor="let slide of slides" 
             [ngClass]="{active: slide == currentSlide, completed: slide < currentSlide}"></a>
     </div>
 </div>

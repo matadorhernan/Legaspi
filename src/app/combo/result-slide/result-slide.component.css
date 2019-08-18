@@ -1,0 +1,13 @@
+form {
+    height: 100%;
+    padding: 30px;
+}
+
+.row{
+    
+    height: 100%;
+}
+
+.row .col-12 {
+    padding: 100px;
+}

@@ -1,0 +1,28 @@
+<form>
+    <h2 class="display-5">Utilidades para Evento</h2>
+    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit mollitia qui, consequuntur voluptatum
+      ipsa accusamus officiis, dolores doloremque ea facere ipsam magni quibusdam iure omnis! Harum laborum amet deleniti
+      qui?</p>
+      <div class="row">
+          <div class="col-12">
+            <ul class="wrapper">
+              <li (click)="selectOperations('pool')">
+                <a class="legaspi-family" [ngClass]="{'selected': pool == true}"></a>
+                <label>Alberca </label>
+              </li>
+              <li (click)="selectOperations('lobby')">
+                <a class="legaspi-family" [ngClass]="{'selected': lobby == true}"></a>
+                <label>Lobby</label>
+              </li>
+              <li (click)="selectOperations('garden')">
+                  <a class="legaspi-family" [ngClass]="{'selected': garden == true}"></a>
+                <label>Jardin</label>
+              </li>
+              <li (click)="selectOperations('parking')">
+                  <a class="legaspi-family" [ngClass]="{'selected': parking == true}"></a>
+                <label>Estacionamiento</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+</form>
