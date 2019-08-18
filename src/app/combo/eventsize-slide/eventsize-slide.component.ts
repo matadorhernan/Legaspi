@@ -11,7 +11,7 @@ export class EventsizeSlideComponent implements OnInit {
 
   
   public currentSelected: string = '';
-  private key = 'legaspi-size'
+  private key = 'legaspi_size'
 
   constructor(private comboService:ComboService) {
     let savedSelected = this.comboService.getSession(this.key)

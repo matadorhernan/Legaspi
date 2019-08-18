@@ -13,7 +13,7 @@ export class UtilitySlideComponent implements OnInit {
   public garden = false;
   public parking = false;
 
-  private key = 'legaspi-utility';
+  private key = 'legaspi_utility';
 
   constructor(private comboService: ComboService) {
     this.comboService.isCurrentValid.next(true);

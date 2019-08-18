@@ -9,7 +9,7 @@ import { ComboService } from '../../services/combo.service';
 export class KindSlideComponent implements OnInit {
 
   public currentSelected: string = '';
-  private key = 'legaspi-kind'
+  private key = 'legaspi_kind'
 
   constructor(private comboService:ComboService) {
     let savedSelected = this.comboService.getSession(this.key)

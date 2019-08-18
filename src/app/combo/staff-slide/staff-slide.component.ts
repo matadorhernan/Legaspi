@@ -12,7 +12,7 @@ export class StaffSlideComponent implements OnInit {
   public security = false;
   public mariachi = false;
 
-  private key = 'legaspi-staff';
+  private key = 'legaspi_staff';
 
   constructor(private comboService: ComboService) {
     this.comboService.isCurrentValid.next(true);

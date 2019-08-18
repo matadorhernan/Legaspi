@@ -11,3 +11,11 @@ form {
 .row .col-12 {
     padding: 100px;
 }
+
+h2.result {
+    font-size: 20px;
+    border: 1px solid #dc3545 !important;
+    background: #dc35460c;
+    padding: 20px;
+    border-radius: 20px;
+}
