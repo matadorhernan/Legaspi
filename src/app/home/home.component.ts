@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComboService } from '../services/combo.service';
+import { SalonService } from '../services/salon.service';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +17,13 @@ export class HomeComponent implements OnInit {
   public tomato: HTMLElement;
   public tomato2: HTMLElement;
 
-  halls = [1, 2, 3, 4];
+  halls = [];
 
-  constructor(private comboService: ComboService) {
+  constructor(private comboService: ComboService, private salonService:SalonService) {
     comboService.isShowingCombo.subscribe(status => {
       this.isShowingCombo = status;
     });
+    this.halls = this.salonService.halls;
   }
 
   ngOnInit() {

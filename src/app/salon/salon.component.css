@@ -1,8 +1,14 @@
 section {
     min-height: 100vh;
-    background: #000;
+    
+    background: linear-gradient(#000000e8, #000000ef), url(/assets/places/marriott.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
 }
 .card-stack {
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     width: 100%;

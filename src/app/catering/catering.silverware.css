@@ -1,0 +1,49 @@
+.silverware-container {
+    transform: translateY(-200px);
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    overflow-x: hidden;
+}
+
+#img-spoon {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    background: url(/assets/main/spoon.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 600px;
+
+    transition: 1s;
+}
+
+#img-knife {
+    position: absolute;
+    top: 130px;
+    right: -40px;
+    background: url(/assets/main/knife.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 600px;
+    
+    transition: 1s;
+}
+
+#img-fork {
+    position: absolute;
+    top: 260px;
+    right: -300px;
+    background: url(/assets/main/fork.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 600px;
+    
+    transition: 1s;
+}

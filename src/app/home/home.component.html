@@ -6,12 +6,15 @@
           Bienvenido!
         </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores necessitatibus soluta natus recusandae, eius
-          dolorum reiciendis maxime fugiat, rerum omnis ea. Quo dolorem quam repudiandae fugit ipsa quidem asperiores
-          quaerat aliquid qui, ut, architecto impedit earum officiis reprehenderit, magnam et ratione corporis
-          molestiae. Incidunt aliquam veniam repellat perferendis accusamus ratione?
+          Corporativo Legaspi by Jimena ofrece servicios para que tu evento sea un éxito, nuestra empresa fue fundada en
+          2013. Con la alta calidad de nuestros servicios organizamos cada vez más eventos en Aguascalientes e interior
+          de la Republica. Tenemos a su alcance desde sillas plegables, Tiffany, Phoenix, Cross-back; mesas redondas,
+          cuadradas, tablones; manteles con textura y de diferentes colores; mobiliario para salas, lobby, lounge;
+          sombrillas individuales, de jardín, para mesas y carpas; renta de rockolas, inflables; servicio de meseros,
+          mariachi, seguridad, preparación de comida, dj, etc.
         </p>
-        <button type="button" class="btn-home btn btn-outline-danger btn-lg btn-block rounded-modern"  (click)="toggleCombo()">Armar un
+        <button type="button" class="btn-home btn btn-outline-danger btn-lg btn-block rounded-modern"
+          (click)="toggleCombo()">Armar un
           paqute</button>
       </div>
       <div class="col-md-6">
@@ -24,21 +27,26 @@
       </div>
     </div>
   </div>
-  <div class="container shows">
-    <h2 class="text-white mb-5 text-center">
-      Nuestros Salones
-    </h2>
-    <p class="text-white-50 text-center mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum temporibus maiores ab sequi quod nam libero odio vel corrupti qui dolor ut aliquid beatae explicabo culpa architecto non eum rerum, dolores autem vero saepe eaque! Earum debitis ex molestiae harum rerum, quaerat dignissimos delectus magnam sed id eveniet tempora.</p>
-    <div class="jagged-top"></div>
-    <div class="jumbotron mb-0">
-       <div class="item-salon" *ngFor="let hall of halls">
-          <img src="/assets/placeholders/hall001.jpg" alt="">
-          <p class="text-dark mt-3">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+  <div class="shows">
+    <div class="container">
+      <h2 class="text-white mb-5 text-center">
+        Nuestros Salones
+      </h2>
+      <p class="text-white-50 text-center mb-5">Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y
+        hoteles más exclusivos de Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín,
+        alberca, estacionamiento, hospedaje, localización, precio, etc.</p>
+      <div class="jagged-top"></div>
+      <div class="jumbotron mb-0">
+        <div class="item-salon" *ngFor="let hall of halls; let i = index" [ngClass]="{'d-none': i > 3}">
+          <img [src]="hall.img" alt="">
+          <p class="text-dark mt-3 font-weight-bold">
+            {{hall.name}}
           </p>
-       </div>
+        </div>
+      </div>
+      <div class="jagged-bottom"></div>
+      <button type="button" class="btn-home btn btn-outline-danger btn-lg w-50 rounded-modern"
+        [routerLink]="['/booking']"> Ver Todos Los Salones </button>
     </div>
-    <div class="jagged-bottom"></div>
-    <button type="button" class="btn-home btn btn-outline-danger btn-lg w-50 rounded-modern" [routerLink]="['/booking']"> Ver Todos Los Salones </button>
   </div>
 </section>

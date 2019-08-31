@@ -3,16 +3,15 @@
     <h2 class="mb-3 text-white">
       Nuestros Salones en Aguascalientes
     </h2>
-    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus soluta ipsum
-      laudantium aspernatur, obcaecati excepturi sed nesciunt suscipit doloribus accusamus aliquam, explicabo numquam
-      vero voluptates at eius tempora. Itaque, quaerat!</p>
+    <p class="mb-4">Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y hoteles más exclusivos de
+      Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín, alberca, estacionamiento,
+      hospedaje, localización, precio, etc.</p>
     <div class="card-stack">
-        <div class="card-salon" *ngFor="let hall of halls">
-            <img src="/assets/placeholders/hall001.jpg" alt="">
-            <h6>SALON COMPLETO . AGS</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laudantium sunt molestiae modi temporibus
-              voluptatum assumenda</p>
-          </div>
+      <div class="card-salon" *ngFor="let salon of salons">
+        <img [src]="salon.img" alt="not loaded">
+        <h6>{{salon.name}}</h6>
+        <p>{{salon.desc}}</p>
+      </div>
     </div>
   </div>
 </section>

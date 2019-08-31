@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SalonService } from '../services/salon.service';
 
 @Component({
   selector: 'app-salon',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalonComponent implements OnInit {
 
-  public halls = [1,2,3,4,5,6]
-  constructor() { 
+  public salons = [];
+
+  constructor(private salonService:SalonService) { 
+    this.salons = this.salonService.halls;
+    console.log(this.salons.length);
+    
   }
 
   ngOnInit() {
