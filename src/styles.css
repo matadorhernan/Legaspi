@@ -6,6 +6,12 @@
 html {
     scroll-behavior: smooth;
 }
+
+html, body {
+    background: #000;
+    width: 100vw;
+    overflow-x: hidden;
+}
 p {
  color: #ffffff85;
 }

@@ -1,73 +1,26 @@
-<footer class=" bg-carbon">
-  <div class="py-3 bg-carbon">
+<footer>
+  <section class="main">
     <div class="container">
-      <a class="footer-brand"></a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="jumbotron my-0 py-3 rounded-0 bg-carbon">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="footer-title">
-            Nosotros
-          </div>
-          <p class="footer-text">
-            Como Corporativo somos lideres, dedicados, y responsables. (Fundada en Ags, Mexico 23 de Agosto de 2013)
-            
-          </p>
+      <div class="footer-wrapper">
+        <div class="footer-brand"></div>
+        <div class="footer-about">
+          <p class="text-left"> Abrimos nuestras puertas en 2013 en la ciudad de Aguascalientes, Mexico, Somos una
+            empresa vibrante y amamos lo que hacemos. </p>
         </div>
-        <div class="col-md-4">
-          <div class="footer-title">
-            Equipo Legaspi
-          </div>
-          <p class="footer-text">
-            Nuestro equipo es encabezado por Jimena Legaspi, como Gerente General. Y mantenemos un orden de lideres en manteleria, muebleria, sociales, administracion etc.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <div class="footer-title">
-            Socios Legaspi
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <p class="footer-text">
-                Quinta Real Auascalientes <br>
-                Gran Hotel Alameda <br>
-                Hotel Marriot Aguasclientes <br>
-                Los Fresnos Valladolid <br>
-                Quinta Tequimilpa <br>
-                Villa Sofia <br>
-                Gran Jardin <br>
-              </p>
-            </div>
-            <div class="col-md-6">
-              <p class="footer-text">
-                El Mezquite <br>
-                Salon Galerias <br>
-                Divertilandia Auascalientes <br>
-                Cerveceria Corona <br>
-                Birrieria El Puertecito <br>
-                Cochinita Pivil Mayapan <br>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="my-2">
-
-      <div class="row">
-        <div class="col-4">
-          <p class="footer-note mt-3"> Corporativo Legaspi by Jimena © 2019 - Developed by cuadrosoft.com </p>
-        </div>
-        <div class="col-8 d-flex justify-content-end">
-          <div class="input-group mb-3 w-100 group-rounded-modern">
-            <input type="text" class="form-control" placeholder="Suscribete para recibir ofertas">
-            <div class="input-group-append w-25">
-              <button class="btn btn-outline-danger w-100" type="button" id="button-addon2"> Suscribirse</button>
-            </div>
-          </div>
-        </div>
+        <ul>
+          <li [routerLink]="['/home']">Navegar a Inicio </li>
+          <li [routerLink]="['/catering']">Navegar a Banqueteria </li>
+          <li [routerLink]="['/booking']">Navegar a Salones </li>
+          <li [routerLink]="['/gallery']">Navegar a Galeria </li>
+        </ul>
       </div>
     </div>
-  </div>
+  </section>
+  <section class="sub">
+    <div class="container">
+      <p class="footer-licence">
+        Corporativo Legaspi by Jimena © 2019 - Developed by cuadrosoft.com
+      </p>
+    </div>
+  </section>
 </footer>

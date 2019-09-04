@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComboService } from '../../services/combo.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +13,8 @@ import { ComboService } from '../../services/combo.service';
   ]
 })
 export class NavbarComponent implements OnInit {
+  public contentNavBar = {};
+
   public pageName: string;
   public isShowingCombo: boolean = false;
   public navSelector: HTMLElement;
@@ -21,10 +24,18 @@ export class NavbarComponent implements OnInit {
   public cateringMenu: HTMLElement;
   public galleryMenu: HTMLElement;
 
-  constructor(private router: Router, private comboService: ComboService) {
+  constructor(
+    private router: Router,
+    private comboService: ComboService,
+    private languageService: LanguageService
+  ) {
     comboService.isShowingCombo.subscribe(status => {
       this.isShowingCombo = status;
     });
+
+    languageService.currentLanguage.subscribe(lang => {
+      this.contentNavBar = languageService.content;
+    })
 
     router.events.subscribe((url: any) => {
       if (router.url.split('/')[1] != this.pageName) {
@@ -68,6 +79,17 @@ export class NavbarComponent implements OnInit {
   navSelected(left: number, width: number) {
     this.navSelector.style.width = `${width}px`;
     this.navSelector.style.left = `${left}px`;
+  }
+
+  toggleLanguage(e) {
+
+    let lang = 'spanish';
+    if (e.target.innerText == 'English ?') {
+      lang = 'english';
+    }
+
+    this.languageService.currentLanguage.next(lang);
+    
   }
 
   toggleCombo() {

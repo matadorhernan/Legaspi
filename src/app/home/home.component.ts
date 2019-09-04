@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComboService } from '../services/combo.service';
 import { SalonService } from '../services/salon.service';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,9 @@ import { SalonService } from '../services/salon.service';
   styleUrls: ['./home.shows.css', './home.main.css', './home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  public contentHome = {}
+
   public isShowingCombo: boolean = false;
   public flour: HTMLElement;
   public pan: HTMLElement;
@@ -19,7 +23,12 @@ export class HomeComponent implements OnInit {
 
   halls = [];
 
-  constructor(private comboService: ComboService, private salonService:SalonService) {
+  constructor(private comboService: ComboService, private salonService:SalonService, private languageService:LanguageService) {
+
+    languageService.currentLanguage.subscribe(lang=>{
+      this.contentHome = this.languageService.content
+    })
+
     comboService.isShowingCombo.subscribe(status => {
       this.isShowingCombo = status;
     });

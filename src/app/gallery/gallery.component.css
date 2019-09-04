@@ -14,7 +14,6 @@ img {
 
     transition: .3s;
     filter: opacity(.7);
-    cursor: pointer;
 }
 img:hover{
     filter: opacity(1);
