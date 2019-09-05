@@ -45,13 +45,13 @@ export class LanguageService {
       header: {
         title: 'Bienvenido!',
         desc:
-          'Corporativo Legaspi by Jimena ofrece servicios para que tu evento sea un éxito, nuestra empresa fue fundada en 2013. Con la alta calidad de nuestros servicios organizamos cada vez más eventos en Aguascalientes e interior de la Republica. Tenemos a su alcance desde sillas plegables, Tiffany, Phoenix, Cross-back; mesas redondas, cuadradas, tablones; manteles con textura y de diferentes colores; mobiliario para salas, lobby, lounge; sombrillas individuales, de jardín, para mesas y carpas; renta de rockolas, inflables; servicio de meseros, mariachi, seguridad, preparación de comida, dj, etc.',
+          'Corporativo Legaspi by Jimena ofrece servicios para que tu evento sea un éxito, nuestra empresa fue fundada en 2013. Con la alta calidad de nuestros servicios organizamos cada vez más eventos en Aguascalientes e interior de la Republica. Tenemos a su alcance desde sillas plegables, Tiffany, Phoenix, Cross-back; mesas redondas, cuadradas, tablones; manteles con textura y de diferentes colores; mobiliario para salas, lobby, lounge; sombrillas individuales, de jardín, para mesas y carpas; renta de rockolas, inflables; servicio de meseros, mariachi, seguridad, preparación de comida, dj.',
         button: 'Armar un paquete'
       },
       subtitle: {
         title: 'Nuestros Salones',
         desc:
-          'Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y hoteles más exclusivos de Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín, alberca, estacionamiento, hospedaje, localización, precio, etc.',
+          'Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y hoteles más exclusivos de Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín, alberca, estacionamiento, hospedaje, localización, precio.',
         button: 'Ver todos los salones'
       }
     },
@@ -88,7 +88,7 @@ export class LanguageService {
         family: {
           title: 'Familiar',
           desc:
-            ' Eventos familiares regulares o importantes, bautizos, ceremonias, bodas, etc.',
+            ' Eventos familiares regulares o importantes, bautizos, ceremonias, bodas.',
           subsection: {
             one: {
               title: 'Banquetes para fiestas',
@@ -111,7 +111,7 @@ export class LanguageService {
       header: {
         title: 'Nuestros Salones en Aguascalientes ',
         desc:
-          'Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y hoteles más exclusivos de Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín, alberca, estacionamiento, hospedaje, localización, precio, etc.'
+          'Corporativo Legaspi by Jimena esta aliado con los salones, quintas, y hoteles más exclusivos de Aguascalientes, y aunque todos son perfectos, podrás elegir entre todos por jardín, alberca, estacionamiento, hospedaje, localización, precio.'
       }
     }
   };

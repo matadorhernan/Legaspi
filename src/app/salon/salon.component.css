@@ -13,6 +13,7 @@ section {
     flex-wrap: wrap;
     width: 100%;
 }
+
 .card-salon {
     position: relative;
     width: 25%; height: 400px;
@@ -31,6 +32,27 @@ section {
 .card-salon h6 {
     color: #ffffff;
     margin-top: 260px;
+}
+
+@media (max-width: 991px){
+    .card-salon img {
+         height: 180px;
+    }
+    .card-salon h6 {
+        margin-top: 190px;
+    }
+}
+
+@media (max-width: 767px){
+    .card-salon {
+        width: 33%;
+    }
+}
+
+@media (max-width: 550px){
+    .card-salon {
+        width: 50%;
+    }
 }
 
 

@@ -31,7 +31,7 @@
       </h2>
       <p class="text-white-50 text-center mb-5">{{contentHome.home.subtitle.desc}}</p>
       <div class="jagged-top"></div>
-      <div class="jumbotron mb-0">
+      <div class="jumbotron mb-0 w-100">
         <div class="item-salon" *ngFor="let hall of halls; let i = index" [ngClass]="{'d-none': i > 3}">
           <img [src]="hall.img" alt="">
           <p class="text-dark mt-3 font-weight-bold">

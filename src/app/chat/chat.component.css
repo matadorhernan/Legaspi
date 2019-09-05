@@ -64,3 +64,9 @@ form {
 
     transform: rotate(45deg);
 }
+
+@media (max-width:466px){
+    .chat-box {
+        display: none;
+    }
+}
