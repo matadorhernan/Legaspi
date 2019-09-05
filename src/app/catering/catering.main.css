@@ -16,9 +16,11 @@
     left: -30%;
     top: -100%;
 
-    background: url(/assets/main/plate.png);
+    background-image: url(/assets/main/plate.png);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 600px; height: 600px;
-    background-size: contain;
+    background-size: 100%;
 }
 
 #img-flour {
@@ -29,7 +31,9 @@
     left: -60%;
     top: -100%;
 
-    background: url(/assets/main/flour.png);
+    background-image: url(/assets/main/flour.png);
+    background-position: center;
+    background-repeat: no-repeat;
     width: 800px; height: 800px;
-    background-size: contain;
+    background-size: 100%;
 }

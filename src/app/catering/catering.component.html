@@ -8,12 +8,10 @@
       </div>
       <div class="col-6">
         <h2 class="mb-3 text-white">
-          Servicio de Banquetes Legaspi
+          {{contentCatering.catering.header.title}}
         </h2>
         <p>
-          El servicio de Banquetes Legaspi ofrece una alta variedad de banquetes temáticos, y de presupuestos variados.
-          Nuestros banquetes pueden ser sencillos para fiestas regulares, complejos para ocasiones empresariales o de
-          etiqueta. Nosotros nos adaptaremos a su necesidad, elección de ingredientes, e instrucciones.
+          {{contentCatering.catering.header.desc}}
         </p>
       </div>
     </div>
@@ -27,51 +25,51 @@
     <div class="row">
       <div class="col-12 node-title">
         <div class="node-icon"></div>
-        <h2 class="mb-3 text-white">
-          Banquetes
+        <h2 class="mb-3 text-white" (click)="isBanquet = !isBanquet">
+          {{contentCatering.catering.tree.title}}
         </h2>
-        <p class="w-25">
-          Si usted planea contratar el servicio de alimentos, nosotros nos adaptaremos a la ocasión de su evento.
+        <p class="w-25" [ngClass]="{'d-none': !isBanquet}">
+          {{contentCatering.catering.tree.desc}}
         </p>
         <div class="node-two"></div>
       </div>
       <div class="col-6">
         <div class="node-subtitle">
           <div class="node-icon"></div>
-          <h2 class="mb-3 text-white">
-            Empresas
+          <h2 class="mb-3 text-white" (click)="isCompany = !isCompany">
+            {{contentCatering.catering.tree.company.title}}
           </h2>
-          <p>
-            En un entorno profesional, una reunión de negocios, junta administrativa, etc.
+          <p [ngClass]="{'d-none': !isCompany}">
+            {{contentCatering.catering.tree.company.desc}}
           </p>
           <div class="node-three"></div>
         </div>
         <div class="row">
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Bocadillos y Canapés
+            <h3 class="mb-3 text-white" (click)="isCompanyOne = !isCompanyOne">
+              {{contentCatering.catering.tree.company.subsection.one.title}}
             </h3>
-            <p>
-              Pequeños refrigerios para entornos de producción.
+            <p [ngClass]="{'d-none': !isCompanyOne}">
+              {{contentCatering.catering.tree.company.subsection.one.desc}}
             </p>
           </div>
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Desayunos y Brunch
+            <h3 class="mb-3 text-white" (click)="isCompanyTwo = !isCompanyTwo">
+              {{contentCatering.catering.tree.company.subsection.two.title}}
             </h3>
-            <p>
-              Ideal para reuniones de personal o ceremonias.
+            <p [ngClass]="{'d-none': !isCompanyTwo}">
+              {{contentCatering.catering.tree.company.subsection.two.desc}}
             </p>
           </div>
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Catering para cenas
+            <h3 class="mb-3 text-white" (click)="isCompanyThree = !isCompanyThree">
+              {{contentCatering.catering.tree.company.subsection.three.title}}
             </h3>
-            <p>
-              Banquete o a la carta, ideal para negocios y reuniones pequeñas.
+            <p [ngClass]="{'d-none': !isCompanyThree}">
+              {{contentCatering.catering.tree.company.subsection.three.desc}}
             </p>
           </div>
         </div>
@@ -79,40 +77,40 @@
       <div class="col-6">
         <div class="node-subtitle">
           <div class="node-icon"></div>
-          <h2 class="mb-3 text-white">
-            Familiar
+          <h2 class="mb-3 text-white" (click)="isFamily = !isFamily">
+            {{contentCatering.catering.tree.family.title}}
           </h2>
-          <p>
-            Eventos familiares regulares o importantes, bautizos, ceremonias, bodas, etc.
+          <p [ngClass]="{'d-none': !isFamily}">
+            {{contentCatering.catering.tree.family.desc}}
           </p>
           <div class="node-three"></div>
         </div>
         <div class="row">
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Banquetes para fiestas
+            <h3 class="mb-3 text-white" (click)="isFamilyOne = !isFamilyOne">
+              {{contentCatering.catering.tree.family.subsection.one.title}}
             </h3>
-            <p>
-              Banquete temático completo ideal para eventos familiares.
+            <p [ngClass]="{'d-none': !isFamilyOne}">
+              {{contentCatering.catering.tree.family.subsection.one.desc}}
             </p>
           </div>
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Mesa de quesos
+            <h3 class="mb-3 text-white" (click)="isFamilyTwo = !isFamilyTwo">
+              {{contentCatering.catering.tree.family.subsection.two.title}}
             </h3>
-            <p>
-              Postres y alimentos de entrada, ideal para fiestas grandes.
+            <p [ngClass]="{'d-none': !isFamilyTwo}">
+              {{contentCatering.catering.tree.family.subsection.two.desc}}
             </p>
           </div>
           <div class="sub-node col-4">
             <div class="node-icon"></div>
-            <h3 class="mb-3 text-white">
-              Mesa de dulces
+            <h3 class="mb-3 text-white" (click)="isFamilyThree = !isFamilyThree">
+              {{contentCatering.catering.tree.family.subsection.three.title}}
             </h3>
-            <p>
-              Quiosco dulcería para eventos infantiles.
+            <p [ngClass]="{'d-none': !isFamilyThree}">
+              {{contentCatering.catering.tree.family.subsection.three.desc}}
             </p>
           </div>
         </div>

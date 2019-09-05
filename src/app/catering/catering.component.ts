@@ -1,13 +1,14 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-catering',
   templateUrl: './catering.component.html',
   styleUrls: [
-    './catering.component.css',
     './catering.main.css',
     './catering.node.css',
     './catering.silverware.css',
+    './catering.component.css',
 ]
 })
 export class CateringComponent implements OnInit {
@@ -17,7 +18,24 @@ export class CateringComponent implements OnInit {
   public knife: HTMLElement;
   public fork: HTMLElement;
 
-  constructor() {}
+  public isBanquet = false;
+  public isCompany = false;
+  public isCompanyOne = false;
+  public isCompanyTwo = false;
+  public isCompanyThree = false;
+  public isFamily = false;
+  public isFamilyOne = false;
+  public isFamilyTwo = false;
+  public isFamilyThree = false;
+
+  public contentCatering = {}
+
+  constructor( private languageService:LanguageService) {
+    this.languageService.currentLanguage.subscribe(lang => {
+
+      this.contentCatering = this.languageService.content;
+    })
+  }
 
   ngOnInit() {
     this.plate = document.getElementById('img-plate');
@@ -28,7 +46,7 @@ export class CateringComponent implements OnInit {
   public animateAssets(verticalOffset) {
     this.plate.style.transform = `translateY(-${verticalOffset * .2}px)`;
     this.spoon.style.right = `-${200 + (verticalOffset * .1)}px`;
-    this.knife.style.right = `-${40 + (verticalOffset * .15)}px`;
+    this.knife.style.right = `-${230 + (verticalOffset * .15)}px`;
     this.fork.style.right = `-${300 + (verticalOffset * .075)}px`;
   }
 

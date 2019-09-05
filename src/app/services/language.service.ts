@@ -19,23 +19,23 @@ export class LanguageService {
           twitter: '#',
           email: '#',
         },
-        language: 'English ?',
+        language: 'English?',
         button: 'Armar un paquete',
         menu: {
           home: 'Inicio',
-          catering: 'Banqueteria',
+          catering: 'Banquetería',
           booking: 'Salones',
-          gallery: 'Galeria'
+          gallery: 'Galería'
         }
       },
       footer: {
         text:
-          'Abrimos nuestras puertas en 2013 en la ciudad de Aguascalientes, Mexico, Somos una empresa vibrante y amamos lo que hacemos. ',
+          'Abrimos nuestras puertas en 2013 en la ciudad de Aguascalientes, México, Somos una empresa vibrante y amamos lo que hacemos. ',
         menu: {
           home: 'Navegar a Inicio ',
-          catering: 'Navegar a Banqueteria ',
+          catering: 'Navegar a Banquetera ',
           booking: 'Navegar a Salones ',
-          gallery: 'Navegar a Galeria '
+          gallery: 'Navegar a Galería'
         },
         licence:
           'Corporativo Legaspi by Jimena © 2019 - Developed by cuadrosoft.com'
@@ -116,6 +116,7 @@ export class LanguageService {
     }
   };
 
+
   public english = {
     shared: {
       navbar: {
@@ -164,7 +165,7 @@ export class LanguageService {
     },
     catering: {
       header: {
-        title: 'Servicio de Banquetes Legaspi',
+        title: 'Our Catrering Service',
         desc:
           'El servicio de Banquetes Legaspi ofrece una alta variedad de banquetes temáticos, y de presupuestos variados. Nuestros banquetes pueden ser sencillos para fiestas regulares, complejos para ocasiones empresariales o de etiqueta. Nosotros nos adaptaremos a su necesidad, elección de ingredientes, e instrucciones.'
       },

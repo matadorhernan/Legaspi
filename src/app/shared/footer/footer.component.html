@@ -4,14 +4,13 @@
       <div class="footer-wrapper">
         <div class="footer-brand"></div>
         <div class="footer-about">
-          <p class="text-left"> Abrimos nuestras puertas en 2013 en la ciudad de Aguascalientes, Mexico, Somos una
-            empresa vibrante y amamos lo que hacemos. </p>
+          <p class="text-left"> {{contentFooter.shared.footer.text}}</p>
         </div>
         <ul>
-          <li [routerLink]="['/home']">Navegar a Inicio </li>
-          <li [routerLink]="['/catering']">Navegar a Banqueteria </li>
-          <li [routerLink]="['/booking']">Navegar a Salones </li>
-          <li [routerLink]="['/gallery']">Navegar a Galeria </li>
+          <li (click)="navigate('/home')">{{contentFooter.shared.footer.menu.home}} </li>
+          <li (click)="navigate('/catering')">{{contentFooter.shared.footer.menu.catering}} </li>
+          <li (click)="navigate('/booking')">{{contentFooter.shared.footer.menu.booking}} </li>
+          <li (click)="navigate('/gallery')">{{contentFooter.shared.footer.menu.gallery}} </li>
         </ul>
       </div>
     </div>
@@ -19,7 +18,7 @@
   <section class="sub">
     <div class="container">
       <p class="footer-licence">
-        Corporativo Legaspi by Jimena © 2019 - Developed by cuadrosoft.com
+        {{contentFooter.shared.footer.licence}}
       </p>
     </div>
   </section>

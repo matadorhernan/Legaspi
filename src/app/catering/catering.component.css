@@ -1,4 +1,53 @@
 section {
-    min-height: 100vh;
-    background: #000;
+  min-height: 100vh;
+  background: #000;
+}
+
+@media (max-width: 1700px) {
+  #img-plate,
+  #img-flour,
+  #img-spoon ,
+  #img-knife ,
+    #img-fork  {
+      background-size: 80%;
+  }
+}
+
+@media (max-width: 1400px) {
+  #img-plate,
+  #img-flour,
+  #img-spoon ,
+  #img-knife ,
+    #img-fork  {
+      background-size: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+    .node-three,
+    .node-two,
+    .node-container>.row>.col-12>*,
+    .node-container>.row>.col-6>.row>*{
+        display: none;
+        
+    }
+    .node-container>.row{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 991px) {
+  #img-plate,
+  #img-flour{
+      background-size: 50%;
+  }
+  #img-spoon ,
+  #img-knife ,
+    #img-fork {
+        display: none;
+    }
+    .main-container {
+        height: 70vh;
+    }
 }
