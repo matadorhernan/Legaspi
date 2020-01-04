@@ -1,0 +1,12 @@
+div {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #f0eff2;
+  padding-top: 90px;
+  overflow-y: scroll;
+  &.loaded {
+    height: auto;
+    overflow: visible;
+  }
+}

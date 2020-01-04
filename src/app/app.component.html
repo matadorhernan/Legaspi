@@ -1,5 +1,7 @@
+<app-loading *ngIf="isLoading"></app-loading>
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-<app-chat></app-chat>
-<app-combo *ngIf="isShowingCombo"></app-combo>
+<app-auto-quote></app-auto-quote>
+<div [ngClass]="{ loaded: !isLoading }">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
