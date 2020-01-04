@@ -1,0 +1,47 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Utilidades para Evento
+  </h2>
+  <p>
+    A continuación, selecciona las utilidades que necesitas en el salon para tu
+    evento. (Opcional)
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/utilities/access.svg'"
+      [label]="'Estacionamiento'"
+      (click)="setSelection('a')"
+      [activated]="venue.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/utilities/fountain.svg'"
+      [label]="'Jardin'"
+      (click)="setSelection('b')"
+      [activated]="venue.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/utilities/living-room.svg'"
+      [label]="'Lobby'"
+      (click)="setSelection('c')"
+      [activated]="venue.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/utilities/swimming-pool.svg'"
+      [label]="'Alberca'"
+      (click)="setSelection('d')"
+      [activated]="venue.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/utilities/castle.svg'"
+      [label]="'Inflable'"
+      (click)="setSelection('e')"
+      [activated]="venue.e"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/utilities/double-slide.svg'"
+      [label]="'Inflable Grande'"
+      (click)="setSelection('f')"
+      [activated]="venue.f"
+    ></app-item-toggle>
+  </div>
+</div>

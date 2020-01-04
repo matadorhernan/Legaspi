@@ -1,0 +1,9 @@
+.option-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 20px;
+}

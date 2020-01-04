@@ -1,0 +1,58 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Utencilios de mesa
+  </h2>
+  <p>
+    A continuación, selecciona los utencilios de mesa para tu evento (Opcional)
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/tableware/spoon.svg'"
+      [label]="'Cuchara'"
+      (click)="setSelection('a')"
+      [activated]="tableware.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/fork.svg'"
+      [label]="'Tenedor'"
+      (click)="setSelection('b')"
+      [activated]="tableware.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/knife.svg'"
+      [label]="'Cuchillo'"
+      (click)="setSelection('c')"
+      [activated]="tableware.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/spoon-small.svg'"
+      [label]="'Cucharita'"
+      (click)="setSelection('d')"
+      [activated]="tableware.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/wine-glass-a.svg'"
+      [label]="'Pinguino'"
+      (click)="setSelection('e')"
+      [activated]="tableware.e"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/wine-glass-b.svg'"
+      [label]="'Copa de agua'"
+      (click)="setSelection('f')"
+      [activated]="tableware.f"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/wine-glass-c.svg'"
+      [label]="'Copa de vino'"
+      (click)="setSelection('g')"
+      [activated]="tableware.g"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tableware/water-glass.svg'"
+      [label]="'Baso Cubero'"
+      (click)="setSelection('i')"
+      [activated]="tableware.i"
+    ></app-item-toggle>
+  </div>
+</div>

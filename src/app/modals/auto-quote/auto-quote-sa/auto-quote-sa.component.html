@@ -1,0 +1,60 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Instrucciones
+  </h2>
+  <p>
+    Esta herramienta te pedirá elegir o llenar unos cuantos campos, en este paso
+    necesitas especificar un nombre de contacto, y un correo de la forma
+    ejemplo@correo.com. El sistema es automático y te permitirá avanzar cuando
+    los datos sean válidos y de esa manera poder contactarte.
+  </p>
+
+  <form [formGroup]="contact">
+    <div class="form-row">
+      <label for="input"> Nombre Completo</label>
+      <input
+        formControlName="name"
+        placeholder="Escribe tu nombre y apellido"
+        type="text"
+        class="form-control"
+      />
+      <div *ngIf="contact.controls.name.touched">
+        <small
+          [ngClass]="{
+            'ml-3 d-block valid-feedback': contact.controls.name.valid
+          }"
+          >Nombre Valido
+        </small>
+        <small
+          [ngClass]="{
+            'ml-3 d-block invalid-feedback': !contact.controls.name.valid
+          }"
+          >El nombre proporcionado no es valido
+        </small>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="input"> Email</label>
+      <input
+        formControlName="email"
+        placeholder="Escribe tu email"
+        type="text"
+        class="form-control"
+      />
+      <div *ngIf="contact.controls.email.touched">
+        <small
+          [ngClass]="{
+            'ml-3 d-block valid-feedback': contact.controls.email.valid
+          }"
+          >Email Valido
+        </small>
+        <small
+          [ngClass]="{
+            'ml-3 d-block invalid-feedback': !contact.controls.email.valid
+          }"
+          >El email proporcionado no es valido
+        </small>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Manteleria de Mesas
+  </h2>
+  <p>
+    Elije el tipo de mantel, los manteles estan ordenadas en costo de menor a
+    mayor
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/tablecloth/white.svg'"
+      [label]="'Blanco'"
+      (click)="setSelection('a')"
+      [activated]="tablecloth.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tablecloth/white.svg'"
+      [label]="'Color'"
+      (click)="setSelection('b')"
+      [activated]="tablecloth.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tablecloth/double.svg'"
+      [label]="'Doble'"
+      (click)="setSelection('c')"
+      [activated]="tablecloth.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tablecloth/sintilla.svg'"
+      [label]="'Sintilla'"
+      (click)="setSelection('d')"
+      [activated]="tablecloth.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tablecloth/bambalina.svg'"
+      [label]="'Bambalina'"
+      (click)="setSelection('e')"
+      [activated]="tablecloth.e"
+    ></app-item-toggle>
+  </div>
+</div>

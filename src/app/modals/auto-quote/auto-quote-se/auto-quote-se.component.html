@@ -1,0 +1,34 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Tipo de Mesa
+  </h2>
+  <p>
+    Elije el tipo de mesa, las mesas estan ordenadas en costo de menor a mayor
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/tables/round.svg'"
+      [label]="'Redonda'"
+      (click)="setSelection('a')"
+      [activated]="table.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tables/rectangular.svg'"
+      [label]="'Rectangular'"
+      (click)="setSelection('b')"
+      [activated]="table.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tables/square.svg'"
+      [label]="'Cuadrada'"
+      (click)="setSelection('c')"
+      [activated]="table.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/tables/vintage.svg'"
+      [label]="'Vintage'"
+      (click)="setSelection('d')"
+      [activated]="table.d"
+    ></app-item-toggle>
+  </div>
+</div>

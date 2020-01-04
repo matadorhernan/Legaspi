@@ -1,0 +1,21 @@
+form .form-row {
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 50px;
+  }
+  input {
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  label {
+    font-size: 12px;
+  }
+  small {
+    display: none;
+  }
+}

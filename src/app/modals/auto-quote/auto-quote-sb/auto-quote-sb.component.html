@@ -1,0 +1,43 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Tamaño del Evento
+  </h2>
+  <p>
+    Ahora solo tienes que estimar cual es el número de personas que invitaras al
+    evento, si tu evento es mucho mayor a 600 nuestro equipo se mantendrá en
+    contacto. De igual manera en este paso, una vez que hayas seleccionado el
+    recuadro el sistema te dejara avanzar.
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/people/smaller.svg'"
+      [label]="'Menor a 100'"
+      (click)="setSelection('a')"
+      [activated]="eventSize.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/people/small.svg'"
+      [label]="'150 a 250'"
+      (click)="setSelection('b')"
+      [activated]="eventSize.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/people/normal.svg'"
+      [label]="'250 a 450'"
+      (click)="setSelection('c')"
+      [activated]="eventSize.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/people/big.svg'"
+      [label]="'450 a 600'"
+      (click)="setSelection('d')"
+      [activated]="eventSize.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/people/big.svg'"
+      [label]="'Mayor a 600'"
+      (click)="setSelection('e')"
+      [activated]="eventSize.e"
+    ></app-item-toggle>
+  </div>
+</div>

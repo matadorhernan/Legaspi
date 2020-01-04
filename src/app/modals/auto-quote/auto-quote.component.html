@@ -1,0 +1,114 @@
+<div
+  class="modal fade"
+  tabindex="1"
+  role="dialog"
+  aria-hidden="false"
+  id="autoQuoteModal"
+>
+  <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title baskervville">Cotizador</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-auto-quote-sa
+          *ngIf="currentSlide == 0"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sa>
+        <app-auto-quote-sb
+          *ngIf="currentSlide == 1"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sb>
+        <app-auto-quote-sc
+          *ngIf="currentSlide == 2"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sc>
+        <app-auto-quote-sh
+          *ngIf="currentSlide == 3"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sh>
+        <app-auto-quote-sd
+          *ngIf="currentSlide == 4"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sd>
+        <app-auto-quote-se
+          *ngIf="currentSlide == 5"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-se>
+        <app-auto-quote-sf
+          *ngIf="currentSlide == 6"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sf>
+        <app-auto-quote-sg
+          *ngIf="currentSlide == 7"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sg>
+        <app-auto-quote-si
+          *ngIf="currentSlide == 8"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-si>
+        <app-auto-quote-sj
+          *ngIf="currentSlide == 9"
+          (validEvent)="handleEvent($event)"
+        ></app-auto-quote-sj>
+        <app-auto-quote-final *ngIf="currentSlide == 10"></app-auto-quote-final>
+      </div>
+      <div class="modal-footer">
+        <ul class="controllers">
+          <li [ngClass]="{ active: currentSlide == 0 }"></li>
+          <li [ngClass]="{ active: currentSlide == 1 }"></li>
+          <li [ngClass]="{ active: currentSlide == 2 }"></li>
+          <li [ngClass]="{ active: currentSlide == 3 }"></li>
+          <li [ngClass]="{ active: currentSlide == 4 }"></li>
+          <li [ngClass]="{ active: currentSlide == 5 }"></li>
+          <li [ngClass]="{ active: currentSlide == 6 }"></li>
+          <li [ngClass]="{ active: currentSlide == 7 }"></li>
+          <li [ngClass]="{ active: currentSlide == 8 }"></li>
+          <li [ngClass]="{ active: currentSlide == 9 }"></li>
+          <li [ngClass]="{ active: currentSlide == 10 }"></li>
+        </ul>
+        <button
+          *ngIf="currentSlide == 0"
+          type="button"
+          class="btn btn-outline-danger"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+        <button
+          *ngIf="currentSlide > 0"
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="prevSlide()"
+        >
+          Regresar
+        </button>
+        <button
+          *ngIf="currentSlide < 10"
+          type="button"
+          class="btn btn-danger"
+          (click)="nextSlide()"
+          [disabled]="!canContinue"
+        >
+          Continuar
+        </button>
+        <button
+          *ngIf="currentSlide == 10"
+          type="button"
+          class="btn btn-danger"
+          data-dismiss="modal"
+        >
+          Terminar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

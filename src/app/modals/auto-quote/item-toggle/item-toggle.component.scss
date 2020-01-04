@@ -1,0 +1,34 @@
+.item {
+  border: 1px solid #a2a2a2;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid #fe043d;
+  }
+  &.activated {
+    img {
+      filter: invert(1);
+      opacity: 1;
+    }
+    box-shadow: 10px 10px 20px 1px #fe043d32;
+    border: 1px solid #fe043d;
+    background: #fe043d;
+    color: white;
+  }
+  img {
+    opacity: 0.8;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+  }
+  label {
+    text-align: center;
+    font-size: 15px;
+  }
+}

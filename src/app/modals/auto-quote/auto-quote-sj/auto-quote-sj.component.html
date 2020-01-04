@@ -1,0 +1,34 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Vajilla
+  </h2>
+  <p>
+    A continuación, selecciona los platos para tu evento (Opcional)
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/plates/square.svg'"
+      [label]="'Trinche'"
+      (click)="setSelection('a')"
+      [activated]="plates.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/plates/bowl.svg'"
+      [label]="'Tazon'"
+      (click)="setSelection('b')"
+      [activated]="plates.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/plates/restaurant.svg'"
+      [label]="'Pastelero'"
+      (click)="setSelection('c')"
+      [activated]="plates.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/plates/cutlery.svg'"
+      [label]="'Redondo'"
+      (click)="setSelection('d')"
+      [activated]="plates.d"
+    ></app-item-toggle>
+  </div>
+</div>

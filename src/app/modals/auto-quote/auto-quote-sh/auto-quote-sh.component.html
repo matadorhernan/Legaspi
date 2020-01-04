@@ -1,0 +1,42 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Grupos Musicales en Evento
+  </h2>
+  <p>
+    A continuación, selecciona el personal para tu evento, en este momento
+    nostros calcularemos que cada grupo que elijas tocara por una hora con
+    excepcion del grupo de musica versatil. (Opcional)
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/music/cowboy.svg'"
+      [label]="'Banda'"
+      (click)="setSelection('a')"
+      [activated]="music.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/music/tripplets.svg'"
+      [label]="'Trios'"
+      (click)="setSelection('b')"
+      [activated]="music.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/music/band.svg'"
+      [label]="'Versatil'"
+      (click)="setSelection('c')"
+      [activated]="music.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/music/mexican.svg'"
+      [label]="'Mariachi'"
+      (click)="setSelection('d')"
+      [activated]="music.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/music/drummer.svg'"
+      [label]="'Batukada'"
+      (click)="setSelection('e')"
+      [activated]="music.e"
+    ></app-item-toggle>
+  </div>
+</div>

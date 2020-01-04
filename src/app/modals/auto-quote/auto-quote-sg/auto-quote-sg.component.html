@@ -1,0 +1,22 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Tipo de Silla
+  </h2>
+  <p>
+    Elije el tipo de silla, las sillas estan ordenadas en costo de menor a mayor
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/chairs/folding.svg'"
+      [label]="'Negra Plegable'"
+      (click)="setSelection('a')"
+      [activated]="chair.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/chairs/chair.svg'"
+      [label]="'Tiffany'"
+      (click)="setSelection('b')"
+      [activated]="chair.b"
+    ></app-item-toggle>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="slide-a p-4 pt-5">
+  <h2 class="baskervville">
+    Personal en Evento
+  </h2>
+  <p>
+    A continuación, selecciona el personal para tu evento. (Opcional)
+  </p>
+  <div class="option-wrap">
+    <app-item-toggle
+      [icon]="'/assets/staff/cook.svg'"
+      [label]="'Banqueteria'"
+      (click)="setSelection('a')"
+      [activated]="staff.a"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/valet.svg'"
+      [label]="'Valet Parking'"
+      (click)="setSelection('b')"
+      [activated]="staff.b"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/police.svg'"
+      [label]="'Seguridad'"
+      (click)="setSelection('c')"
+      [activated]="staff.c"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/waiter.svg'"
+      [label]="'Meceria'"
+      (click)="setSelection('d')"
+      [activated]="staff.d"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/barman.svg'"
+      [label]="'Barman'"
+      (click)="setSelection('e')"
+      [activated]="staff.e"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/captain.svg'"
+      [label]="'Capitan'"
+      (click)="setSelection('f')"
+      [activated]="staff.f"
+    ></app-item-toggle>
+    <app-item-toggle
+      [icon]="'/assets/staff/hoster.svg'"
+      [label]="'Venue Host'"
+      (click)="setSelection('g')"
+      [activated]="staff.g"
+    ></app-item-toggle>
+  </div>
+</div>
