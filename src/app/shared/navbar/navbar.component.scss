@@ -80,6 +80,13 @@ nav {
       height: 15px;
       width: 15px;
     }
+
+    &.menu-icon img{
+      filter: none;
+      height: 30px;
+      width: 30px;
+    }
+
     .btn {
       background: #fe043d;
       border-radius: 30px;
@@ -90,5 +97,17 @@ nav {
       width: 30px;
       filter: invert(1);
     }
+  }
+}
+
+@media screen and (max-width:  991px ) {
+  nav {
+  grid-template-columns: 300px auto;
+  .sub-menu {
+    justify-content: flex-end;
+    li {
+      margin-right: 22px;
+    }
+  }
   }
 }
