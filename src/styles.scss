@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Baskervville&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+.baskervville {
+  font-family: "Baskervville", serif;
+}
+
+.ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.modal-backdrop {
+  background: #000000 !important;
+  &.show {
+    opacity: 0.05 !important;
+  }
+}
