@@ -1,106 +1,94 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ComboService } from '../../services/combo.service';
-import { LanguageService } from '../../services/language.service';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef
+} from "@angular/core";
+import { Router } from "@angular/router";
+import { ModalService } from "src/app/services/modal.service";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: [
-    './navbar.subframe.css',
-    './navbar.mainframe.css',
-    './navbar.component.css'
-  ]
+  selector: "app-navbar",
+  templateUrl: "./navbar.component.html",
+  styleUrls: ["./navbar.component.scss"]
 })
-export class NavbarComponent implements OnInit {
-  public contentNavBar = {};
-
+export class NavbarComponent implements AfterViewInit {
   public pageName: string;
-  public isShowingCombo: boolean = false;
-  public navSelector: HTMLElement;
+  public isAutoQuoteModalActive: boolean;
 
-  public homeMenu: HTMLElement;
-  public bookingMenu: HTMLElement;
-  public cateringMenu: HTMLElement;
-  public galleryMenu: HTMLElement;
+  public updateIndicator(left: number, width: number) {
+    this.indicatorElement.nativeElement.style.width = `${width}px`;
+    this.indicatorElement.nativeElement.style.left = `${left}px`;
+  }
 
-  constructor(
-    private router: Router,
-    private comboService: ComboService,
-    private languageService: LanguageService
-  ) {
-    comboService.isShowingCombo.subscribe(status => {
-      this.isShowingCombo = status;
+  public toggleModal() {
+    this.modalService.isAutoQuoteModalActive$.next(
+      !this.isAutoQuoteModalActive
+    );
+  }
+
+  @ViewChild("indicatorElement", { static: false })
+  indicatorElement?: ElementRef;
+  @ViewChild("homeLabel", { static: false })
+  homeLabel?: ElementRef;
+  @ViewChild("cateringLabel", { static: false })
+  cateringLabel?: ElementRef;
+  @ViewChild("galleryLabel", { static: false })
+  galleryLabel?: ElementRef;
+  @ViewChild("venuesLabel", { static: false })
+  venuesLabel?: ElementRef;
+  @ViewChild("contactLabel", { static: false })
+  contactLabel?: ElementRef;
+
+  constructor(private router: Router, private modalService: ModalService) {
+    modalService.isAutoQuoteModalActive$.subscribe(status => {
+      this.isAutoQuoteModalActive = status;
     });
+  }
 
-    languageService.currentLanguage.subscribe(lang => {
-      this.contentNavBar = languageService.content;
-    })
+  ngAfterViewInit(): void {
+    this.router.events.subscribe((url: any) => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 1);
 
-    router.events.subscribe((url: any) => {
-      if (router.url.split('/')[1] != this.pageName) {
-        this.pageName = router.url.split('/')[1];
+      if (this.router.url.split("/")[1] != this.pageName) {
+        this.pageName = this.router.url.split("/")[1];
 
         switch (this.pageName) {
-          case 'booking':
-            this.navSelected(
-              this.bookingMenu.offsetLeft,
-              this.bookingMenu.offsetWidth
+          case "banqueteria":
+            this.updateIndicator(
+              this.cateringLabel.nativeElement.offsetLeft,
+              this.cateringLabel.nativeElement.offsetWidth
             );
             break;
-          case 'catering':
-            this.navSelected(
-              this.cateringMenu.offsetLeft,
-              this.cateringMenu.offsetWidth
+          case "salones":
+            this.updateIndicator(
+              this.venuesLabel.nativeElement.offsetLeft,
+              this.venuesLabel.nativeElement.offsetWidth
             );
             break;
-          case 'gallery':
-            this.navSelected(
-              this.galleryMenu.offsetLeft,
-              this.galleryMenu.offsetWidth
+          case "galeria":
+            this.updateIndicator(
+              this.galleryLabel.nativeElement.offsetLeft,
+              this.galleryLabel.nativeElement.offsetWidth
+            );
+            break;
+          case "contacto":
+            this.updateIndicator(
+              this.contactLabel.nativeElement.offsetLeft,
+              this.contactLabel.nativeElement.offsetWidth
             );
             break;
           default:
-            this.navSelected(
-              this.homeMenu.offsetLeft,
-              this.homeMenu.offsetWidth
+            this.updateIndicator(
+              this.homeLabel.nativeElement.offsetLeft,
+              this.homeLabel.nativeElement.offsetWidth
             );
             break;
         }
       }
     });
-  }
-  navigate(route: string) {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 1);
-    this.router.navigate([route]);
-  }
-  navSelected(left: number, width: number) {
-    this.navSelector.style.width = `${width}px`;
-    this.navSelector.style.left = `${left}px`;
-  }
-
-  toggleLanguage(e) {
-
-    let lang = 'spanish';
-    if (e.target.innerText == 'English ?') {
-      lang = 'english';
-    }
-
-    this.languageService.currentLanguage.next(lang);
-    
-  }
-
-  toggleCombo() {
-    this.comboService.isShowingCombo.next(!this.isShowingCombo);
-  }
-
-  ngOnInit() {
-    this.navSelector = document.getElementById('nav-selector');
-    this.homeMenu = document.getElementById('home');
-    this.bookingMenu = document.getElementById('booking');
-    this.cateringMenu = document.getElementById('catering');
-    this.galleryMenu = document.getElementById('gallery');
   }
 }

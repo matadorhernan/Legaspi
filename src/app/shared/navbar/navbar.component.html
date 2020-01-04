@@ -1,32 +1,22 @@
-<nav class="sticky-top">
-  <!-- Social Buttons -->
-  <div class="main-frame">
-    <ul class="nav-social">
-      <li><i class="leg-facebook"></i></li>
-      <li><i class="leg-instagram"></i></li>
-      <li><i class="leg-youtube"></i></li>
-      <li><i class="leg-twitter"></i></li>
-      <li><i class="leg-envelope"></i></li>
-      <li>{{contentNavBar.shared.navbar.contact.phone}}</li>
-    </ul>
-    <div class="nav-brand"></div>
-    <ul class="nav-store">
-      <li><i class="leg-store"></i></li>
-      <li>
-        <button class="btn-send btn btn-outline-danger rounded-modern" (click)="toggleLanguage($event)">{{contentNavBar.shared.navbar.language}}</button>
-      </li>
-      <li>
-        <button class="btn-send btn btn-outline-danger rounded-modern" (click)="toggleCombo()">{{contentNavBar.shared.navbar.button}}</button>
-      </li>
-    </ul>
-  </div>
-  <div class="sub-frame">
-    <ul class="menu">
-      <div id="nav-selector"></div>
-      <li id="home"><a (click)="navigate('/')">{{contentNavBar.shared.navbar.menu.home}}</a></li>
-      <li id="catering"><a (click)="navigate('/catering')">{{contentNavBar.shared.navbar.menu.catering}}</a></li>
-      <li id="booking"><a (click)="navigate('/booking')">{{contentNavBar.shared.navbar.menu.booking}}</a></li>
-      <li id="gallery"><a (click)="navigate('/gallery')">{{contentNavBar.shared.navbar.menu.gallery}}</a></li>
-    </ul>
-  </div>
+<nav>
+  <app-brand [invert]="false"></app-brand>
+  <ul class="menu">
+    <li #homeLabel [routerLink]="['/']">Inicio</li>
+    <li #cateringLabel [routerLink]="['/banqueteria']">Banqueteria</li>
+    <li #galleryLabel [routerLink]="['/galeria']">Galeria</li>
+    <li #venuesLabel [routerLink]="['/salones']">Salones</li>
+    <li #contactLabel [routerLink]="['/contacto']">Contacto</li>
+    <li #indicatorElement class="indicator"></li>
+  </ul>
+
+  <ul class="sub-menu">
+    <li class="store">
+      <img src="/assets/shopping-bag.svg" alt="shopping bag vector" />
+    </li>
+    <li>
+      <button class="btn btn-danger" type="button" (click)="toggleModal()">
+        Cotizador
+      </button>
+    </li>
+  </ul>
 </nav>
