@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to legaspi!');
+    expect(page.getTitleText()).toEqual('CorpLegaspiAngular app is running!');
   });
 
   afterEach(async () => {
