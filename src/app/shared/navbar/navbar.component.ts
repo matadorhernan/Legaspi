@@ -16,6 +16,7 @@ import { ModalService } from "src/app/services/modal.service";
 export class NavbarComponent implements AfterViewInit {
   public pageName: string;
   public isAutoQuoteModalActive: boolean;
+  public isMobileNavActive: boolean = false;
 
   public updateIndicator(left: number, width: number) {
     this.indicatorElement.nativeElement.style.width = `${width}px`;
@@ -41,6 +42,9 @@ export class NavbarComponent implements AfterViewInit {
   @ViewChild("contactLabel", { static: false })
   contactLabel?: ElementRef;
 
+  @ViewChild("mobileNav", { static: false })
+  mobileNav?: ElementRef;
+
   constructor(private router: Router, private modalService: ModalService) {
     modalService.isAutoQuoteModalActive$.subscribe(status => {
       this.isAutoQuoteModalActive = status;
@@ -55,6 +59,7 @@ export class NavbarComponent implements AfterViewInit {
 
       if (this.router.url.split("/")[1] != this.pageName) {
         this.pageName = this.router.url.split("/")[1];
+        this.isMobileNavActive = false;
 
         switch (this.pageName) {
           case "banqueteria":
@@ -90,5 +95,18 @@ export class NavbarComponent implements AfterViewInit {
         }
       }
     });
+  }
+
+  public toggleMobileMenu() {
+    if (!this.isMobileNavActive) {
+      setTimeout(() => {
+        this.mobileNav.nativeElement.focus();
+      }, 6);
+    }
+    this.isMobileNavActive = !this.isMobileNavActive;
+  }
+
+  public minMobileNav(e) {
+    this.isMobileNavActive = false;
   }
 }
