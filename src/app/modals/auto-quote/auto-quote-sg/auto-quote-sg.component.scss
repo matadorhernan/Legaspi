@@ -6,4 +6,18 @@
   margin-left: auto;
   margin-right: auto;
   column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .option-wrap {
+    width: 66%;
+  }
+}
+
+@media (max-width: 576px) {
+  .option-wrap {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
 }

@@ -30,7 +30,6 @@
     (blur)="minMobileNav($event)"
     [ngClass]="{ 'active-mobile': isMobileNavActive }"
   >
-    <!-- <li class="active" (click)="toggleModal()">Cotizador</li> -->
     <li
       routerLinkActive="active"
       [routerLink]="['/']"
@@ -44,5 +43,6 @@
     <li routerLinkActive="active" [routerLink]="['/galeria']">Galeria</li>
     <li routerLinkActive="active" [routerLink]="['/salones']">Salones</li>
     <li routerLinkActive="active" [routerLink]="['/contacto']">Contacto</li>
+    <li class="quote" (click)="toggleModal()">Cotizador</li>
   </ul>
 </div>

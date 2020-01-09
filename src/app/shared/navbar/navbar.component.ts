@@ -24,6 +24,7 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   public toggleModal() {
+    this.isMobileNavActive = false;
     this.modalService.isAutoQuoteModalActive$.next(
       !this.isAutoQuoteModalActive
     );
