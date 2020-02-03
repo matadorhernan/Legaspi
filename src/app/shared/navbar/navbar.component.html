@@ -1,48 +1,22 @@
-<div class="all-navs">
-  <nav>
-    <app-brand [invert]="false"></app-brand>
-    <ul class="menu d-none d-lg-flex">
-      <li #homeLabel [routerLink]="['/']">Inicio</li>
-      <li #cateringLabel [routerLink]="['/banqueteria']">Banqueteria</li>
-      <li #galleryLabel [routerLink]="['/galeria']">Galeria</li>
-      <li #venuesLabel [routerLink]="['/salones']">Salones</li>
-      <li #contactLabel [routerLink]="['/contacto']">Contacto</li>
-      <li #indicatorElement class="indicator"></li>
-    </ul>
-
-    <ul class="sub-menu">
-      <!-- <li class="store">
-        <img src="/assets/shopping-bag.svg" alt="shopping bag vector" />
-      </li> -->
-      <li class="d-none d-md-block">
-        <button class="btn btn-danger" type="button" (click)="toggleModal()">
-          Cotizador
-        </button>
-      </li>
-      <li class="menu-icon d-block d-lg-none" (click)="toggleMobileMenu()">
-        <img src="/assets/menu.svg" alt="menu icon" />
-      </li>
-    </ul>
-  </nav>
-  <ul
-    #mobileNav
-    class="nav-mobile d-lg-none"
-    (blur)="minMobileNav($event)"
-    [ngClass]="{ 'active-mobile': isMobileNavActive }"
-  >
-    <li
-      routerLinkActive="active"
-      [routerLink]="['/']"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Inicio
-    </li>
-    <li routerLinkActive="active" [routerLink]="['/banqueteria']">
-      Banqueteria
-    </li>
-    <li routerLinkActive="active" [routerLink]="['/galeria']">Galeria</li>
-    <li routerLinkActive="active" [routerLink]="['/salones']">Salones</li>
-    <li routerLinkActive="active" [routerLink]="['/contacto']">Contacto</li>
-    <li class="quote" (click)="toggleModal()">Cotizador</li>
+<nav>
+  <app-brand [invert]="false"></app-brand>
+  <ul class="menu">
+    <li #homeLabel [routerLink]="['/']">Inicio</li>
+    <li #cateringLabel [routerLink]="['/banqueteria']">Banqueteria</li>
+    <li #galleryLabel [routerLink]="['/galeria']">Galeria</li>
+    <li #venuesLabel [routerLink]="['/salones']">Salones</li>
+    <li #contactLabel [routerLink]="['/contacto']">Contacto</li>
+    <li #indicatorElement class="indicator"></li>
   </ul>
-</div>
+
+  <ul class="sub-menu">
+    <li class="store">
+      <img src="/assets/shopping-bag.svg" alt="shopping bag vector" />
+    </li>
+    <li>
+      <button class="btn btn-danger" type="button" (click)="toggleModal()">
+        Cotizador
+      </button>
+    </li>
+  </ul>
+</nav>
